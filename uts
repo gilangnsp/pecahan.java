@@ -1,0 +1,19 @@
+# Fungsi untuk menghitung gaji dan upah lembur
+def hitung_gaji(gaji_bulanan, jam_lembur):
+    upah_per_jam = gaji_bulanan / 173
+    if jam_lembur > 4:
+        upah_lembur = (jam_lembur - 4) * 2 * upah_per_jam
+    else:
+        upah_lembur = 0
+    total_gaji = gaji_bulanan + upah_lembur
+    return total_gaji
+
+# Inputan gaji bulanan dan jam lembur dari pengguna
+gaji_bulanan = float(input("Masukkan gaji bulanan: "))
+jam_lembur = float(input("Masukkan jumlah jam lembur: "))
+
+# Panggil fungsi untuk menghitung gaji
+total_gaji = hitung_gaji(gaji_bulanan, jam_lembur)
+
+# Tampilkan hasil
+print(f"Total gaji yang diterima adalah: {total_gaji}")
